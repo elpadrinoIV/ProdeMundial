@@ -25,11 +25,11 @@
 
 {% if score %}
 <div class="score row">
-    <div class="col-sm">Puntos: {{score.scoreTotal}} </div>
+  <div class="col-sm">Puntos: <span>{{score.scoreTotal}}</span></div>
 </div>
 {% endif %}
 
-<div class="selector-rondas">
+<div class="selector-rondas rondasUsers">
     <ul class="nav nav-tabs">
         {% for r in rondas %}
         <li
