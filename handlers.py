@@ -18,12 +18,12 @@ jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir),
 
 USUARIO_ESPECIAL_RESULTADOS = "resultados_de_los_partidos"
 
-RONDAS = [{'ronda': "Primera", 'limite': 'Thu June 14 12:00:00 2018 GMT-0000'},
-          {'ronda': "Octavos", 'limite': 'Sat June 30 11:00:00 2018 GMT-0000'},
-          {'ronda': "Cuartos", 'limite': 'Fri July 6 11:00:00 2018 GMT-0000'},
-          {'ronda': "Semifinal", 'limite': 'Tue July 10 15:00:00 2018 GMT-0000'},
-          {'ronda': "TercerPuesto", 'limite': 'Sat July 14 11:00:00 2018 GMT-0000'},
-          {'ronda': "Final", 'limite': 'Sun July 15 12:00:00 2018 GMT-0000'}]
+RONDAS = [{'ronda': "Primera", 'limite': 'Thu June 14 15:00:00 2018 GMT-0000'},
+          {'ronda': "Octavos", 'limite': 'Sat June 30 14:00:00 2018 GMT-0000'},
+          {'ronda': "Cuartos", 'limite': 'Fri July 6 14:00:00 2018 GMT-0000'},
+          {'ronda': "Semifinal", 'limite': 'Tue July 10 18:00:00 2018 GMT-0000'},
+          {'ronda': "TercerPuesto", 'limite': 'Sat July 14 14:00:00 2018 GMT-0000'},
+          {'ronda': "Final", 'limite': 'Sun July 15 15:00:00 2018 GMT-0000'}]
               
 
 def getPosiciones():
