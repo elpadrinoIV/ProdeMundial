@@ -219,10 +219,10 @@ def getScore(user):
 
                     # 5 puntos por primer gol
                     if partidoUser['primerGol'] == partidoReal['primerGol'] and partidoReal['primerGol'] != '':
-                        scorePartido += 5
-                        scoreTotal += 5
+                        scorePartido += 10
+                        scoreTotal += 10
 
-                    if partidoUser['equipo1'] == 'ARGENTINA':
+                    if partidoUser['equipo1'] == 'ARGENTINA' or partidoUser['equipo2'] == 'ARGENTINA':
                         scoreTotal += scorePartido
                         scorePartido *= 2
 

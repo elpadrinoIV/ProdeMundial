@@ -1,8 +1,6 @@
 <form method="post" class="partidos">
   <section id="resultados">
     <div class="wrapper">
-            <p class="bajada">
-            Completá el marcador de cada partido. El resultado (ganador, perdedor o empate) se infiere del marcador. Seleccioná también quien mete el primer gol en cada partido. Por último, no te olvides de cargar los extras.            </p>
       <div class="displayFlex"> {% for grupo,datos_grupo in fixture|dictsort %}
         <article class="grupo">
           <div class="content">

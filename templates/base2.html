@@ -25,17 +25,28 @@
         <input type="checkbox" name ="Instancias" id="Instancias">
         <label></label>
         <ul>
-          <li><a class="dropdown-item" href="/">Primera</a></li>
-          <li><a class="dropdown-item disabled" href="/?ronda=Octavos">Octavos</a></li>
-          <li><a class="dropdown-item disabled" href="/?ronda=Cuartos">Cuartos</a></li>
-          <li><a class="dropdown-item disabled" href="/?ronda=Semifinal">Semifinal</a></li>
-          <li><a class="dropdown-item disabled" href="/?ronda=TercerPuesto">Tercer puesto</a></li>
-          <li><a class="dropdown-item disabled" href="/?ronda=Final">Final</a></li>
+          <li><a class="dropdown-item" href="/?ronda=Primera">Primera</a></li>
+          <li><a class="dropdown-item" href="/?ronda=Octavos">Octavos</a></li>
+          <li><a class="dropdown-item" href="/?ronda=Cuartos">Cuartos</a></li>
+          <li><a class="dropdown-item" href="/?ronda=Semifinal">Semifinal</a></li>
+          <li><a class="dropdown-item" href="/?ronda=TercerPuesto">Tercer puesto</a></li>
+          <li><a class="dropdown-item" href="/?ronda=Final">Final</a></li>
         </ul>
       </li>
       <li> <a href="/posiciones">Posiciones</a> </li>
       <li> <a href="/resultados_por_usuario">Resultados por participante</a> </li>
-      <li> <a href="/resultados">Resultados reales</a> </li>
+      <li class="has-children"> <a>Resultados reales</a>
+        <input type="checkbox" name ="Resultados" id="Resultados">
+        <label></label>
+        <ul>
+          <li><a class="dropdown-item" href="/resultados?ronda=Primera">Primera</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=Octavos">Octavos</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=Cuartos">Cuartos</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=Semifinal">Semifinal</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=TercerPuesto">Tercer puesto</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=Final">Final</a></li>
+        </ul>
+      </li>
       <li> <a href="/reglas">Reglas</a> </li>
       <li> <a href="/logout"><i class="fas fa-user"></i>{{user.name}} (Logout)</a> </li>
       {% else %}
