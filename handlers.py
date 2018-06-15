@@ -404,6 +404,10 @@ class ReglasHandler(Handler):
 ########## POSICIONES HANDLER ##########
 class PosicionesHandler(Handler):
     def get(self):
+        if not self.user:
+            self.redirect('/')
+            return
+
         logging.info("GET_REQUEST POSICIONESHANDLER (%s)" % self.user.name)
         usuarios = getPosiciones()
 
