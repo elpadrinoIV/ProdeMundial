@@ -3,6 +3,9 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
 - url: /stylesheets
   static_dir: static/stylesheets
 - url: /scripts
@@ -10,6 +13,15 @@ handlers:
 - url: /images/(.*\.png)
   static_files: static/images/\1
   upload: static/images/(.*\.png)
+- url: /images/(.*\.svg)
+  static_files: static/images/\1
+  upload: static/images/(.*\.svg)
+- url: /images/(.*\.jpg)
+  static_files: static/images/\1
+  upload: static/images/(.*\.jpg)
+- url: /fonts/(.*)
+  static_files: static/fonts/\1
+  upload: static/fonts/(.*)
 - url: /data/(.*\.json)
   mime_type: application/json
   static_files: static/data/\1

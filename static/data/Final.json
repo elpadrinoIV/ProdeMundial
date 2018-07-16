@@ -1,16 +1,18 @@
 {
-    "Tercer Puesto": {
+    "Final": {
         "partidos": [
             {
-                "equipo1": "",
-                "equipo2": "",
-                "fecha": "2014/07/13",
+                "codEquipo1": "fra",
+                "equipo1": "Francia",
+                "codEquipo2": "cro",
+                "equipo2": "Croacia",
+                "fecha": "2018/07/15",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": false,
+        "permite_modificar": true,
         "tipo": "non-grupo"
     }
 }

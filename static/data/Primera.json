@@ -2,7 +2,9 @@
     "A": {
         "partidos": [
             {
+                "codEquipo1": "rus",
                 "equipo1": "Rusia",
+                "codEquipo2": "sau",
                 "equipo2": "Arabia Saudita",
                 "fecha": "2018/06/14",
                 "primerGol": "",
@@ -10,7 +12,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "egy",
                 "equipo1": "Egipto",
+                "codEquipo2": "ury",
                 "equipo2": "Uruguay",
                 "fecha": "2018/06/15",
                 "primerGol": "",
@@ -18,7 +22,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "rus",
                 "equipo1": "Rusia",
+                "codEquipo2": "egy",
                 "equipo2": "Egipto",
                 "fecha": "2018/06/19",
                 "primerGol": "",
@@ -26,7 +32,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "ury",
                 "equipo1": "Uruguay",
+                "codEquipo2": "sau",
                 "equipo2": "Arabia Saudita",
                 "fecha": "2018/06/20",
                 "primerGol": "",
@@ -34,7 +42,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "ury",
                 "equipo1": "Uruguay",
+                "codEquipo2": "rus",
                 "equipo2": "Rusia",
                 "fecha": "2018/06/25",
                 "primerGol": "",
@@ -42,7 +52,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "sau",
                 "equipo1": "Arabia Saudita",
+                "codEquipo2": "egy",
                 "equipo2": "Egipto",
                 "fecha": "2018/06/25",
                 "primerGol": "",
@@ -50,13 +62,15 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": true,
+        "permite_modificar": true,
         "tipo": "grupo"
     },
     "B": {
         "partidos": [
             {
+                "codEquipo1": "mar",
                 "equipo1": "Marruecos",
+                "codEquipo2": "irn",
                 "equipo2": "Ir\u00e1n",
                 "fecha": "2018/06/15",
                 "primerGol": "",
@@ -64,7 +78,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "por",
                 "equipo1": "Portugal",
+                "codEquipo2": "esp",
                 "equipo2": "Espa\u00f1a",
                 "fecha": "2018/06/15",
                 "primerGol": "",
@@ -72,7 +88,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "por",
                 "equipo1": "Portugal",
+                "codEquipo2": "mar",
                 "equipo2": "Marruecos",
                 "fecha": "2018/06/20",
                 "primerGol": "",
@@ -80,7 +98,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "irn",
                 "equipo1": "Ir\u00e1n",
+                "codEquipo2": "esp",
                 "equipo2": "Espa\u00f1a",
                 "fecha": "2018/06/20",
                 "primerGol": "",
@@ -88,7 +108,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "irn",
                 "equipo1": "Ir\u00e1n",
+                "codEquipo2": "por",
                 "equipo2": "Portugal",
                 "fecha": "2018/06/25",
                 "primerGol": "",
@@ -96,7 +118,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "esp",
                 "equipo1": "Espa\u00f1a",
+                "codEquipo2": "mar",
                 "equipo2": "Marruecos",
                 "fecha": "2018/06/25",
                 "primerGol": "",
@@ -104,13 +128,15 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": true,
+        "permite_modificar": true,
         "tipo": "grupo"
     },
     "C": {
         "partidos": [
             {
+                "codEquipo1": "fra",
                 "equipo1": "Francia",
+                "codEquipo2": "aus",
                 "equipo2": "Australia",
                 "fecha": "2018/06/16",
                 "primerGol": "",
@@ -118,7 +144,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "per",
                 "equipo1": "Per\u00fa",
+                "codEquipo2": "dnk",
                 "equipo2": "Dinamarca",
                 "fecha": "2018/06/16",
                 "primerGol": "",
@@ -126,7 +154,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "fra",
                 "equipo1": "Francia",
+                "codEquipo2": "per",
                 "equipo2": "Per\u00fa",
                 "fecha": "2018/06/21",
                 "primerGol": "",
@@ -134,7 +164,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "dnk",
                 "equipo1": "Dinamarca",
+                "codEquipo2": "aus",
                 "equipo2": "Australia",
                 "fecha": "2018/06/21",
                 "primerGol": "",
@@ -142,7 +174,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "dnk",
                 "equipo1": "Dinamarca",
+                "codEquipo2": "fra",
                 "equipo2": "Francia",
                 "fecha": "2018/06/26",
                 "primerGol": "",
@@ -150,7 +184,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "aus",
                 "equipo1": "Australia",
+                "codEquipo2": "per",
                 "equipo2": "Per\u00fa",
                 "fecha": "2018/06/26",
                 "primerGol": "",
@@ -158,13 +194,15 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": true,
+        "permite_modificar": true,
         "tipo": "grupo"
     },
     "D": {
         "partidos": [
             {
+                "codEquipo1": "arg",
                 "equipo1": "ARGENTINA",
+                "codEquipo2": "isl",
                 "equipo2": "Islandia",
                 "fecha": "2018/06/16",
                 "primerGol": "",
@@ -172,7 +210,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "cro",
                 "equipo1": "Croacia",
+                "codEquipo2": "nga",
                 "equipo2": "Nigeria",
                 "fecha": "2018/06/16",
                 "primerGol": "",
@@ -180,7 +220,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "arg",
                 "equipo1": "ARGENTINA",
+                "codEquipo2": "cro",
                 "equipo2": "Croacia",
                 "fecha": "2018/06/21",
                 "primerGol": "",
@@ -188,7 +230,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "nga",
                 "equipo1": "Nigeria",
+                "codEquipo2": "isl",
                 "equipo2": "Islandia",
                 "fecha": "2018/06/22",
                 "primerGol": "",
@@ -196,7 +240,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "nga",
                 "equipo1": "Nigeria",
+                "codEquipo2": "arg",
                 "equipo2": "ARGENTINA",
                 "fecha": "2018/06/26",
                 "primerGol": "",
@@ -204,7 +250,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "isl",
                 "equipo1": "Islandia",
+                "codEquipo2": "cro",
                 "equipo2": "Croacia",
                 "fecha": "2018/06/26",
                 "primerGol": "",
@@ -212,13 +260,15 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": true,
+        "permite_modificar": true,
         "tipo": "grupo"
     },
     "E": {
         "partidos": [
             {
+                "codEquipo1": "cri",
                 "equipo1": "Costa Rica",
+                "codEquipo2": "srb",
                 "equipo2": "Serbia",
                 "fecha": "2018/06/17",
                 "primerGol": "",
@@ -226,7 +276,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "bra",
                 "equipo1": "Brasil",
+                "codEquipo2": "sui",
                 "equipo2": "Suiza",
                 "fecha": "2018/06/17",
                 "primerGol": "",
@@ -234,7 +286,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "bra",
                 "equipo1": "Brasil",
+                "codEquipo2": "cri",
                 "equipo2": "Costa Rica",
                 "fecha": "2018/06/22",
                 "primerGol": "",
@@ -242,7 +296,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "srb",
                 "equipo1": "Serbia",
+                "codEquipo2": "sui",
                 "equipo2": "Suiza",
                 "fecha": "2018/06/22",
                 "primerGol": "",
@@ -250,7 +306,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "srb",
                 "equipo1": "Serbia",
+                "codEquipo2": "bra",
                 "equipo2": "Brasil",
                 "fecha": "2018/06/27",
                 "primerGol": "",
@@ -258,7 +316,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "sui",
                 "equipo1": "Suiza",
+                "codEquipo2": "cri",
                 "equipo2": "Costa Rica",
                 "fecha": "2018/06/27",
                 "primerGol": "",
@@ -266,13 +326,15 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": true,
+        "permite_modificar": true,
         "tipo": "grupo"
     },
     "F": {
         "partidos": [
             {
+                "codEquipo1": "deu",
                 "equipo1": "Alemania",
+                "codEquipo2": "mex",
                 "equipo2": "M\u00e9xico",
                 "fecha": "2018/06/17",
                 "primerGol": "",
@@ -280,7 +342,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "swe",
                 "equipo1": "Suecia",
+                "codEquipo2": "kor",
                 "equipo2": "Corea",
                 "fecha": "2018/06/18",
                 "primerGol": "",
@@ -288,7 +352,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "deu",
                 "equipo1": "Alemania",
+                "codEquipo2": "swe",
                 "equipo2": "Suecia",
                 "fecha": "2018/06/23",
                 "primerGol": "",
@@ -296,7 +362,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "kor",
                 "equipo1": "Corea",
+                "codEquipo2": "mex",
                 "equipo2": "M\u00e9xico",
                 "fecha": "2018/06/23",
                 "primerGol": "",
@@ -304,7 +372,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "kor",
                 "equipo1": "Corea",
+                "codEquipo2": "deu",
                 "equipo2": "Alemania",
                 "fecha": "2018/06/27",
                 "primerGol": "",
@@ -312,7 +382,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "mex",
                 "equipo1": "M\u00e9xico",
+                "codEquipo2": "swe",
                 "equipo2": "Suecia",
                 "fecha": "2018/06/27",
                 "primerGol": "",
@@ -320,13 +392,15 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": true,
+        "permite_modificar": true,
         "tipo": "grupo"
     },
     "G": {
         "partidos": [
             {
+                "codEquipo1": "bel",
                 "equipo1": "B\u00e9lgica",
+                "codEquipo2": "pan",
                 "equipo2": "Panam\u00e1",
                 "fecha": "2018/06/18",
                 "primerGol": "",
@@ -334,7 +408,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "tun",
                 "equipo1": "T\u00fanez",
+                "codEquipo2": "eng",
                 "equipo2": "Inglaterra",
                 "fecha": "2018/06/18",
                 "primerGol": "",
@@ -342,7 +418,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "bel",
                 "equipo1": "B\u00e9lgica",
+                "codEquipo2": "tun",
                 "equipo2": "T\u00fanez",
                 "fecha": "2018/06/23",
                 "primerGol": "",
@@ -350,7 +428,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "eng",
                 "equipo1": "Inglaterra",
+                "codEquipo2": "pan",
                 "equipo2": "Panam\u00e1",
                 "fecha": "2018/06/24",
                 "primerGol": "",
@@ -358,7 +438,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "eng",
                 "equipo1": "Inglaterra",
+                "codEquipo2": "bel",
                 "equipo2": "B\u00e9lgica",
                 "fecha": "2018/06/26",
                 "primerGol": "",
@@ -366,7 +448,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "pan",
                 "equipo1": "Panam\u00e1",
+                "codEquipo2": "tun",
                 "equipo2": "T\u00fanez",
                 "fecha": "2018/06/26",
                 "primerGol": "",
@@ -374,13 +458,15 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": true,
+        "permite_modificar": true,
         "tipo": "grupo"
     },
     "H": {
         "partidos": [
             {
+                "codEquipo1": "pol",
                 "equipo1": "Polonia",
+                "codEquipo2": "sen",
                 "equipo2": "Senegal",
                 "fecha": "2018/06/19",
                 "primerGol": "",
@@ -388,7 +474,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "col",
                 "equipo1": "Colombia",
+                "codEquipo2": "jpn",
                 "equipo2": "Jap\u00f3n",
                 "fecha": "2018/06/19",
                 "primerGol": "",
@@ -396,7 +484,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "pol",
                 "equipo1": "Polonia",
+                "codEquipo2": "col",
                 "equipo2": "Colombia",
                 "fecha": "2018/06/24",
                 "primerGol": "",
@@ -404,7 +494,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "jpn",
                 "equipo1": "Jap\u00f3n",
+                "codEquipo2": "sen",
                 "equipo2": "Senegal",
                 "fecha": "2018/06/24",
                 "primerGol": "",
@@ -412,7 +504,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "jpn",
                 "equipo1": "Jap\u00f3n",
+                "codEquipo2": "pol",
                 "equipo2": "Polonia",
                 "fecha": "2018/06/28",
                 "primerGol": "",
@@ -420,7 +514,9 @@
                 "scoreEquipo2": ""
             },
             {
+                "codEquipo1": "sen",
                 "equipo1": "Senegal",
+                "codEquipo2": "col",
                 "equipo2": "Colombia",
                 "fecha": "2018/06/28",
                 "primerGol": "",
@@ -428,7 +524,7 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": true,
+        "permite_modificar": true,
         "tipo": "grupo"
     }
 }

@@ -26,6 +26,7 @@ class User(db.Model):
     password_hash = db.StringProperty(required = True)
     puntaje = db.IntegerProperty(required = True)
     email = db.EmailProperty()
+    celular = db.StringProperty()
     created = db.DateTimeProperty(auto_now_add = True)
 
     @classmethod
@@ -43,11 +44,13 @@ class User(db.Model):
         return u
 
     @classmethod
-    def register(cls, name, password, email = None, puntaje = 0):
+    def register(cls, name, password, email = None, celular = None, puntaje = 0):
         pw_hash = utils.make_password_hash(name, password)
         u = cls(name = name, password_hash = pw_hash, puntaje = puntaje)
         if email:
             u.email = email
+        if celular:
+            u.celular = celular
         return u
 
     @classmethod

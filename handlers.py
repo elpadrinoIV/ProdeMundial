@@ -18,12 +18,12 @@ jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir),
 
 USUARIO_ESPECIAL_RESULTADOS = "resultados_de_los_partidos"
 
-RONDAS = [{'ronda': "Primera", 'limite': 'Thu June 14 12:00:00 2018 GMT-0000'},
-          {'ronda': "Octavos", 'limite': 'Sat June 30 11:00:00 2018 GMT-0000'},
-          {'ronda': "Cuartos", 'limite': 'Fri July 6 11:00:00 2018 GMT-0000'},
-          {'ronda': "Semifinal", 'limite': 'Tue July 10 15:00:00 2018 GMT-0000'},
-          {'ronda': "TercerPuesto", 'limite': 'Sat July 14 11:00:00 2018 GMT-0000'},
-          {'ronda': "Final", 'limite': 'Sun July 15 12:00:00 2018 GMT-0000'}]
+RONDAS = [{'ronda': "Primera", 'limite': 'Thu June 14 15:00:00 2018 GMT-0000'},
+          {'ronda': "Octavos", 'limite': 'Sat June 30 14:00:00 2018 GMT-0000'},
+          {'ronda': "Cuartos", 'limite': 'Fri July 6 14:00:00 2018 GMT-0000'},
+          {'ronda': "Semifinal", 'limite': 'Tue July 10 18:00:00 2018 GMT-0000'},
+          {'ronda': "TercerPuesto", 'limite': 'Sat July 14 14:00:00 2018 GMT-0000'},
+          {'ronda': "Final", 'limite': 'Sun July 15 15:00:00 2018 GMT-0000'}]
               
 
 def getPosiciones():
@@ -121,8 +121,8 @@ def getFixture(ronda, username = None):
         # completo con los datos llenados previamente
         for key,value in fixture.iteritems():
             for partido in value['partidos']:
-                equipo1 = partido['equipo1']
-                equipo2 = partido['equipo2']
+                equipo1 = partido['codEquipo1']
+                equipo2 = partido['codEquipo2']
                 keyScore1 = ronda + "_" + equipo1 + "_vs_" + equipo2 + "_score1"
                 scoreEquipo1 = resultados[keyScore1]
                 keyScore2 = ronda + "_" + equipo1 + "_vs_" + equipo2 + "_score2"
@@ -155,9 +155,13 @@ def getScore(user):
         resultadoReal = json.loads(resultadoReal.resultados)
 
         extras = [{'campo': 'campeon', 'puntos': 100},
-                  {'campo': 'segundo', 'puntos': 80}, 
-                  {'campo': 'tercero', 'puntos': 60}, 
-                  {'campo': 'cuarto', 'puntos': 50}, 
+                  {'campo': 'segundo', 'puntos': 80},
+                  {'campo': 'tercero', 'puntos': 70},
+                  {'campo': 'cuarto', 'puntos': 60},
+                  {'campo': 'balon_oro', 'puntos': 100},
+                  {'campo': 'guante_oro', 'puntos': 100},
+                  {'campo': 'fair_play', 'puntos': 50},
+                  {'campo': 'goleador_argentina', 'puntos': 100},
                   {'campo': 'posicion_argentina', 'puntos': 100}]
 
         for extra in extras:
@@ -167,17 +171,17 @@ def getScore(user):
             else:
                 score[extra['campo']] = 0
 
-        if resultadoUser['goleador1'] != 'ninguno' and resultadoUser['goleador1'] == resultadoReal['goleador1']:
+        if resultadoUser['bota_oro1'] != 'ninguno' and resultadoUser['bota_oro1'] == resultadoReal['bota_oro1']:
             scoreTotal += 100
-            score['goleador1'] = 100
+            score['bota_oro1'] = 100
         else:
-            score['goleador1'] = 0
+            score['bota_oro1'] = 0
 
-        if resultadoUser['goleador2'] != 'ninguno' and resultadoUser['goleador2'] == resultadoReal['goleador1']:
+        if resultadoUser['bota_oro2'] != 'ninguno' and resultadoUser['bota_oro2'] == resultadoReal['bota_oro1']:
             scoreTotal += 70
-            score['goleador2'] = 70
+            score['bota_oro2'] = 70
         else:
-            score['goleador2'] = 0
+            score['bota_oro2'] = 0
             
 
 
@@ -215,10 +219,10 @@ def getScore(user):
 
                     # 5 puntos por primer gol
                     if partidoUser['primerGol'] == partidoReal['primerGol'] and partidoReal['primerGol'] != '':
-                        scorePartido += 5
-                        scoreTotal += 5
+                        scorePartido += 10
+                        scoreTotal += 10
 
-                    if partidoUser['equipo1'] == 'ARGENTINA':
+                    if partidoUser['equipo1'] == 'ARGENTINA' or partidoUser['equipo2'] == 'ARGENTINA':
                         scoreTotal += scorePartido
                         scorePartido *= 2
 
@@ -319,9 +323,11 @@ class SignUpHandler(Handler):
         password = self.request.get("password")
         verify = self.request.get("verify")
         email = self.request.get("email")
+        celular = self.request.get("celular")
 
         params["username"] = username
         params["email"] = email
+        params["celular"] = celular
 
         error_en_form = False
 
@@ -345,10 +351,14 @@ class SignUpHandler(Handler):
             params["error_email"] = "email invalido"
             error_en_form = True
 
+        if not utils.valid_celular_form(celular):
+            params["error_celular"] = "celular invalido"
+            error_en_form = True
+
         if error_en_form:
             self.render_page(**params)
         else:
-            user = dbmodels.User.register(username, password, email)
+            user = dbmodels.User.register(username, password, email, celular)
             user.put()
 
             self.login(user)
@@ -394,6 +404,10 @@ class ReglasHandler(Handler):
 ########## POSICIONES HANDLER ##########
 class PosicionesHandler(Handler):
     def get(self):
+        if not self.user:
+            self.redirect('/')
+            return
+
         logging.info("GET_REQUEST POSICIONESHANDLER (%s)" % self.user.name)
         usuarios = getPosiciones()
 
@@ -441,7 +455,8 @@ class MainPageHandler(BaseHandler):
 
         fixture = getFixture(ronda['ronda'], self.user.name)
 
-        score = getScore(self.user.name)
+        ##score = getScore(self.user.name)
+        score = 0
 
         mostrarExtras = False
         extras = {}
@@ -473,8 +488,7 @@ class MainPageHandler(BaseHandler):
                   "permite_modificar": permite_modificar,
                   "equipos": getEquipos(),
                   "jugadores": getJugadores()}
-            
-        #self.render("index.html", fixture = fixture, score = score, ronda = ronda, rondas = RONDAS, whoami="", mostrarExtras = mostrarExtras);
+
         self.render("index2.html", **params)
 
     def postLoggeado(self):
@@ -497,8 +511,12 @@ class MainPageHandler(BaseHandler):
             resultados['segundo'] = self.request.get('segundo')
             resultados['tercero'] = self.request.get('tercero')
             resultados['cuarto'] = self.request.get('cuarto')
-            resultados['goleador1'] = self.request.get('goleador1')
-            resultados['goleador2'] = self.request.get('goleador2')
+            resultados['bota_oro1'] = self.request.get('bota_oro1')
+            resultados['bota_oro2'] = self.request.get('bota_oro2')
+            resultados['balon_oro'] = self.request.get('balon_oro')
+            resultados['guante_oro'] = self.request.get('guante_oro')
+            resultados['fair_play'] = self.request.get('fair_play')
+            resultados['goleador_argentina'] = self.request.get('goleador_argentina')
             posicion_argentina = self.request.get('posicion_argentina')
             if posicion_argentina != 'ninguno':
                 resultados['posicion_argentina'] = int(posicion_argentina)
@@ -507,12 +525,12 @@ class MainPageHandler(BaseHandler):
 
         for grupo, datos_grupo in fixture.iteritems():
             for partido in datos_grupo["partidos"]:
-                keyScore1 = ronda + "_" + partido["equipo1"] + "_vs_" + partido["equipo2"] + "_score1"
-                keyScore2 = ronda + "_" + partido["equipo1"] + "_vs_" + partido["equipo2"] + "_score2"
+                keyScore1 = ronda + "_" + partido["codEquipo1"] + "_vs_" + partido["codEquipo2"] + "_score1"
+                keyScore2 = ronda + "_" + partido["codEquipo1"] + "_vs_" + partido["codEquipo2"] + "_score2"
                 valueScore1 = self.request.get(keyScore1)
                 valueScore2 = self.request.get(keyScore2)
-                
-                keyPrimerGol = ronda + "_" + partido["equipo1"] + "_vs_" + partido["equipo2"] + "_primer_gol"
+
+                keyPrimerGol = ronda + "_" + partido["codEquipo1"] + "_vs_" + partido["codEquipo2"] + "_primer_gol"
                 valuePrimerGol = self.request.get(keyPrimerGol)
 
                 resultados[keyScore1] = valueScore1
@@ -581,13 +599,19 @@ class ResultadosHandler(BaseHandler):
         fixture = getFixture(ronda)
         resultados = {}
 
+
+
         if ronda == 'Primera':
             resultados['campeon'] = self.request.get('campeon')
             resultados['segundo'] = self.request.get('segundo')
             resultados['tercero'] = self.request.get('tercero')
             resultados['cuarto'] = self.request.get('cuarto')
-            resultados['goleador1'] = self.request.get('goleador1')
-            resultados['goleador2'] = self.request.get('goleador2')
+            resultados['bota_oro1'] = self.request.get('bota_oro1')
+            resultados['bota_oro2'] = self.request.get('bota_oro2')
+            resultados['balon_oro'] = self.request.get('balon_oro')
+            resultados['guante_oro'] = self.request.get('guante_oro')
+            resultados['fair_play'] = self.request.get('fair_play')
+            resultados['goleador_argentina'] = self.request.get('goleador_argentina')
             posicion_argentina = self.request.get('posicion_argentina')
             if posicion_argentina != 'ninguno':
                 resultados['posicion_argentina'] = int(posicion_argentina)
@@ -596,12 +620,12 @@ class ResultadosHandler(BaseHandler):
 
         for grupo, datos_grupo in fixture.iteritems():
             for partido in datos_grupo["partidos"]:
-                keyScore1 = ronda + "_" + partido["equipo1"] + "_vs_" + partido["equipo2"] + "_score1"
-                keyScore2 = ronda + "_" + partido["equipo1"] + "_vs_" + partido["equipo2"] + "_score2"
+                keyScore1 = ronda + "_" + partido["codEquipo1"] + "_vs_" + partido["codEquipo2"] + "_score1"
+                keyScore2 = ronda + "_" + partido["codEquipo1"] + "_vs_" + partido["codEquipo2"] + "_score2"
                 valueScore1 = self.request.get(keyScore1)
                 valueScore2 = self.request.get(keyScore2)
 
-                keyPrimerGol = ronda + "_" + partido["equipo1"] + "_vs_" + partido["equipo2"] + "_primer_gol"
+                keyPrimerGol = ronda + "_" + partido["codEquipo1"] + "_vs_" + partido["codEquipo2"] + "_primer_gol"
                 valuePrimerGol = self.request.get(keyPrimerGol)
 
                 resultados[keyScore1] = valueScore1
@@ -682,3 +706,36 @@ class ResultadosPorUsuarioHandler(BaseHandler):
         logging.info("POST_REQUEST RESULTADOSPORUSUARIOHANDLER")
         usuario = self.request.get('usuario_seleccionado')
         self.redirect("/resultados_por_usuario?usuario=%s" % usuario)
+
+
+
+
+########## SCORES POR USUARIO HANDLER ##########
+class ScoresHandler(BaseHandler):
+    def get(self):
+        if not self.user:
+            self.redirect('/')
+            return
+            
+        if self.user.name != 'NicoDascanio' and self.user.name != 'MarianoDascanio':
+            self.redirect('/')
+            return
+
+        usuarios = dbmodels.User.all()
+        usuarios.order("name")
+        usuarios = list(usuarios)
+
+        scores = {}
+        usuario = self.request.get('usuario')
+        if usuario is not None and usuario != "":
+            scores = getScore(usuario)
+
+        self.render('scores2.html', scores = scores, usuarios = usuarios)
+
+
+
+
+    def postLoggeado(self):
+        logging.info("POST_REQUEST SCORESHANDLER")
+        usuario = self.request.get('usuario_seleccionado')
+        self.redirect("/scores?usuario=%s" % usuario)

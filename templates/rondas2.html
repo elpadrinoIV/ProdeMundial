@@ -1,219 +1,308 @@
-<form method="post">
-    {% for grupo,datos_grupo in fixture|dictsort %}
-    <div class="grupo row border mt-5">
-        <div class="col-sm-12">
-            <h3>{{grupo}}</h3>
+<form method="post" class="partidos">
+  <section id="resultados">
+    <div class="wrapper">
+      <div class="displayFlex"> {% for grupo,datos_grupo in fixture|dictsort %}
+        <article class="grupo">
+          <div class="content">
+            <h3>{% if datos_grupo.tipo == "grupo" %}Grupo{% endif %} {{grupo}}</h3>
+            {% if datos_grupo.permite_modificar %}
             {% for partido in datos_grupo.partidos %}
-            {% if loop.index is divisibleby 2 %}
-            <div class="row mt-2 mb-2 pt-2 pb-2 bg-light">
-            {% else %}
-            <div class="row mt-2 mb-2 ">
-            {% endif %}
-                {% if partido.equipo1 == 'ARGENTINA' %}
-                <div class="col-sm-3 font-weight-bold">{{partido.equipo1}}</div>
-                {% else %}
-                <div class="col-sm-3">{{partido.equipo1}}</div>
-                {% endif %}
-                <div class="col-sm-1 radio"><input type="radio" name="{{ronda.ronda}}_{{partido.equipo1}}_vs_{{partido.equipo2}}_primer_gol" value="{{partido.equipo1}}"
-                                                                                                                                             {% if partido.primerGol == partido.equipo1 %}
+            <ol>
+              <li>
+                <div class="colFlag"><img src="/images/{{partido.codEquipo1}}.png" alt="{{partido.equipo1}}"/></div>
+                <div class="colPais"><img class="flagMobile" src="/images/{{partido.codEquipo1}}.png" alt="{{partido.equipo1}}"/>{% if partido.equipo1 == 'ARGENTINA' %} <span class="font-weight-bold">{{partido.equipo1}}</span> {% else %} <span>{{partido.equipo1}}</span> {% endif %}</div>
+                <div class="colRadio">
+                  <input type="radio" name="{{ronda.ronda}}_{{partido.codEquipo1}}_vs_{{partido.codEquipo2}}_primer_gol" value="{{partido.codEquipo1}}"
+                                                                                                                                             {% if partido.primerGol == partido.codEquipo1 %}
                                                                                                                                              checked
                                                                                                                                              {% endif %}
                                                                                                                                              {% if not permite_modificar %}
                                                                                                                                              disabled
                                                                                                                                              {% endif %}
-                                                                                                                                             ></div>
+                                                                                                                                             >
+                </div>
                 {% if permite_modificar %}
-                <div class="col-sm-2"><div class="form-group"><input type="text" class="form-control text-center" name="{{ronda.ronda}}_{{partido.equipo1}}_vs_{{partido.equipo2}}_score1" value="{{partido.scoreEquipo1}}"></div></div>
-                <div class="col-sm-2"><div class="form-group"><input type="text" class="form-control text-center" name="{{ronda.ronda}}_{{partido.equipo1}}_vs_{{partido.equipo2}}_score2" value="{{partido.scoreEquipo2}}"></div></div>
+                <div class="colInput">
+                  <input type="text" class="form-control text-center" name="{{ronda.ronda}}_{{partido.codEquipo1}}_vs_{{partido.codEquipo2}}_score1" value="{{partido.scoreEquipo1}}">
+                </div>
+                <div class="colInput">
+                  <input type="text" class="form-control text-center" name="{{ronda.ronda}}_{{partido.codEquipo1}}_vs_{{partido.codEquipo2}}_score2" value="{{partido.scoreEquipo2}}">
+                </div>
                 {% else %}
-                <div class="col-sm-2">{{partido.scoreEquipo1}}</div>
-                <div class="col-sm-2">{{partido.scoreEquipo2}}</div>
+                <div class="colInput">
+                  <input type="text" class="form-control text-center" value="{{partido.scoreEquipo1}}" disabled="disabled">
+                </div>
+                <div class="colInput">
+                  <input type="text" class="form-control text-center" value="{{partido.scoreEquipo2}}" disabled="disabled">
+                </div>
                 {% endif %}
-                <div class="col-sm-1 radio"><input type="radio" name="{{ronda.ronda}}_{{partido.equipo1}}_vs_{{partido.equipo2}}_primer_gol" value="{{partido.equipo2}}"
-                                                                                                                                             {% if partido.primerGol == partido.equipo2 %}
+                <div class="colRadio">
+                  <input type="radio" name="{{ronda.ronda}}_{{partido.codEquipo1}}_vs_{{partido.codEquipo2}}_primer_gol" value="{{partido.codEquipo2}}"
+                                                                                                                                             {% if partido.primerGol == partido.codEquipo2 %}
                                                                                                                                              checked
                                                                                                                                              {% endif %}
                                                                                                                                              {% if not permite_modificar %}
                                                                                                                                              disabled
                                                                                                                                              {% endif %}
-                                                                                                                                             ></div>
-                {% if partido.equipo2 == 'ARGENTINA' %}
-                <div class="col-sm-3 font-weight-bold">{{partido.equipo2}}</div>
-                {% else %}
-                <div class="col-sm-3">{{partido.equipo2}}</div>
-                {% endif %}
-            </div>
-                {% endfor %}
-        </div>
+                                                                                                                                             >
+                </div>
+                <div class="colPais2"><img class="flagMobile" src="/images/{{partido.codEquipo2}}.png" alt="{{partido.equipo2}}"/> {% if partido.equipo2 == 'ARGENTINA' %} <span class="font-weight-bold">{{partido.equipo2}}</span> {% else %} <span>{{partido.equipo2}}</span> {% endif %} </div>
+                <div class="colFlag2"><img src="/images/{{partido.codEquipo2}}.png" alt="{{partido.equipo2}}"/></div>
+              </li>
+            </ol>
+            {% endfor %}
+            {% endif %} </div>
+        </article>
+        {% endfor %} </div>
     </div>
-    {% endfor %}
-
-    {% if mostrarExtras %}
-    <p>Cargá también los siguientes resultados:</p>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Campeón</label>
-      <div class="col-sm-2">
-        <select name="campeon"
+  </section>
+  {% if mostrarExtras %}
+  <section id="extras">
+    <div class="wrapper">
+      <div class="displayFlex">
+        <article id="campeon">
+          <div class="content">
+            <h2>CAMPEON</h2>
+            <select name="campeon"
             {% if not permite_modificar %}
             disabled
             {% endif %}
             >
             <option value="ninguno">-</option>
-            {% for equipo in equipos %}
-            <option value="{{equipo.code}}"
-            {% if extras.campeon == equipo.code %}
+            {% for key, value in equipos | dictsort %}
+            <option value="{{key}}"
+            {% if extras.campeon == key %}
             selected="selected"
             {% endif %}
-            >{{equipo.title}}</option>
+            >
+            {{value.title}}
+            </option>
             {% endfor %}
-        </select>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Segundo</label>
-      <div class="col-sm-2">
-        <select name="segundo"
+            </select>
+          </div>
+        </article>
+        <article id="segundo">
+          <div class="content">
+            <h2>SEGUNDO</h2>
+            <select name="segundo"
             {% if not permite_modificar %}
             disabled
             {% endif %}
             >
             <option value="ninguno">-</option>
-            {% for equipo in equipos %}
-            <option value="{{equipo.code}}"
-            {% if extras.segundo == equipo.code %}
+            {% for key, value in equipos | dictsort %}
+            <option value="{{key}}"
+            {% if extras.segundo == key %}
             selected="selected"
             {% endif %}
-            >{{equipo.title}}</option>
+            >
+            {{value.title}}
+            </option>
             {% endfor %}
-        </select>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Tercero</label>
-      <div class="col-sm-2">
-        <select name="tercero"
+            </select>
+          </div>
+        </article>
+        <article id="tercero">
+          <div class="content">
+            <h2>TERCERO</h2>
+            <select name="tercero"
             {% if not permite_modificar %}
             disabled
             {% endif %}
             >
             <option value="ninguno">-</option>
-            {% for equipo in equipos %}
-            <option value="{{equipo.code}}"
-            {% if extras.tercero == equipo.code %}
+            {% for key, value in equipos | dictsort %}
+            <option value="{{key}}"
+            {% if extras.tercero == key %}
             selected="selected"
             {% endif %}
-            >{{equipo.title}}</option>
+            >
+            {{value.title}}
+            </option>
             {% endfor %}
-        </select>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Cuarto</label>
-      <div class="col-sm-2">
-        <select name="cuarto"
+            </select>
+          </div>
+        </article>
+        <article id="cuarto">
+          <div class="content">
+            <h2>CUARTO</h2>
+            <select name="cuarto"
             {% if not permite_modificar %}
             disabled
             {% endif %}
             >
             <option value="ninguno">-</option>
-            {% for equipo in equipos %}
-            <option value="{{equipo.code}}"
-            {% if extras.cuarto == equipo.code %}
+            {% for key, value in equipos | dictsort %}
+            <option value="{{key}}"
+            {% if extras.cuarto == key %}
             selected="selected"
             {% endif %}
-            >{{equipo.title}}</option>
+            >
+            {{value.title}}
+            </option>
             {% endfor %}
-        </select>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Goleador Op. 1</label>
-      <div class="col-sm-2">
-                            <select name="goleador1"
+            </select>
+          </div>
+        </article>
+        <article id="goleador1">
+          <div class="content">
+            <h2>GOLEADOR DEL MUNDIAL</h2>
+            <span>opcion 1</span>
+            <select name="bota_oro1"
                                 {% if not permite_modificar %}
                                 disabled
                                 {% endif %}
                                 >
-                                <option value="ninguno">-</option>
-                                {% for jugador in jugadores %}
-                                <option value="{{jugador.key}}"
-                                {% if extras.goleador1 == jugador.key %}
+            <option value="ninguno">-</option>
+            {% for jugador in jugadores %}
+            <option value="{{jugador.key}}"
+                                {% if extras.bota_oro1 == jugador.key %}
                                 selected="selected"
                                 {% endif %}
-                                >{{jugador.title}}</option>
-                                {% endfor %}
-                            </select>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Goleador Op. 2</label>
-      <div class="col-sm-2">
-                            <select name="goleador2"
+                                >
+            {{jugador.jugador}} ({{jugador.country}})
+            </option>
+            {% endfor %}
+            </select>
+          </div>
+        </article>
+        <article id="goleador2">
+          <div class="content">
+            <h2>GOLEADOR DEL MUNDIAL</h2>
+            <span>opcion 2</span>
+            <select name="bota_oro2"
                                 {% if not permite_modificar %}
                                 disabled
                                 {% endif %}
                                 >
-                                <option value="ninguno">-</option>
-                                {% for jugador in jugadores %}
-                                <option value="{{jugador.key}}"
-                                {% if extras.goleador2 == jugador.key %}
+            <option value="ninguno">-</option>
+            {% for jugador in jugadores %}
+            <option value="{{jugador.key}}"
+                                {% if extras.bota_oro2 == jugador.key %}
                                 selected="selected"
                                 {% endif %}
-                                >{{jugador.title}}</option>
-                                {% endfor %}
-                            </select>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Goleador Argentina</label>
-      <div class="col-sm-2">
-                            <select name="goleador_argentina"
+                                >
+            {{jugador.jugador}} ({{jugador.country}})
+            </option>
+            {% endfor %}
+            </select>
+          </div>
+        </article>
+        <article id="balondeOro">
+          <div class="content">
+            <h2>MEJOR JUGADOR</h2>
+            <select name="balon_oro"
                                 {% if not permite_modificar %}
                                 disabled
                                 {% endif %}
                                 >
-                                <option value="ninguno">-</option>
-                                {% for jugador in jugadores %}
-                                <option value="{{jugador.key}}"
-                                {% if extras.goleador1 == jugador.key %}
+            <option value="ninguno">-</option>
+            {% for jugador in jugadores %}
+            <option value="{{jugador.key}}"
+                                {% if extras.balon_oro == jugador.key %}
                                 selected="selected"
                                 {% endif %}
-                                >{{jugador.title}}</option>
-                                {% endfor %}
-                            </select>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Posición Argentina</label>
-      <div class="col-sm-2">
-                            <select name="posicion_argentina"
+                                >
+            {{jugador.jugador}} ({{jugador.country}})
+            </option>
+            {% endfor %}
+            </select>
+          </div>
+        </article>
+        <article id="guantedeOro">
+          <div class="content">
+            <h2>GUANTE DE ORO</h2>
+            <select name="guante_oro"
                                 {% if not permite_modificar %}
                                 disabled
                                 {% endif %}
                                 >
-                                <option value="ninguno">-</option>
-                                {% for pos in range(1, 33) %}
-                                <option value="{{pos}}"
+            <option value="ninguno">-</option>
+            {% for jugador in jugadores %}
+            <option value="{{jugador.key}}"
+                                {% if extras.guante_oro == jugador.key %}
+                                selected="selected"
+                                {% endif %}
+                                >
+            {{jugador.jugador}} ({{jugador.country}})
+            </option>
+            {% endfor %}
+            </select>
+          </div>
+        </article>
+
+        <article id="fairPlay">
+          <div class="content">
+            <h2>FAIR PLAY</h2>
+            <select name="fair_play"
+            {% if not permite_modificar %}
+            disabled
+            {% endif %}
+            >
+            <option value="ninguno">-</option>
+            {% for key, value in equipos | dictsort %}
+            <option value="{{key}}"
+            {% if extras.fair_play == key %}
+            selected="selected"
+            {% endif %}
+            >
+            {{value.title}}
+            </option>
+            {% endfor %}
+            </select>
+          </div>
+        </article>
+
+        <article id="goleadorArgentina">
+          <div class="content">
+            <h2>GOLEADOR DE ARGENTINA</h2>
+            <select name="goleador_argentina"
+                                {% if not permite_modificar %}
+                                disabled
+                                {% endif %}
+                                >
+            <option value="ninguno">-</option>
+            {% for jugador in jugadores %}
+            {% if jugador.country == 'Argentina' %}
+            <option value="{{jugador.key}}"
+                                {% if extras.goleador_argentina == jugador.key %}
+                                selected="selected"
+                                {% endif %}
+                                >
+            {{jugador.jugador}}
+            </option>
+            {% endif %}
+            {% endfor %}
+            </select>
+          </div>
+        </article>
+        <article id="puestoArgentina">
+          <div class="content">
+            <h2>POSICION DE ARGENTINA</h2>
+            <select name="posicion_argentina"
+                                {% if not permite_modificar %}
+                                disabled
+                                {% endif %}
+                                >
+            <option value="ninguno">-</option>
+            {% for pos in range(1, 33) %}
+            <option value="{{pos}}"
                                 {% if extras.posicion_argentina == pos %}
                                 selected="selected"
                                 {% endif %}
-                                >{{pos}}</option>
-                                {% endfor %}
-                            </select>
+                                >
+            {{pos}}
+            </option>
+            {% endfor %}
+            </select>
+          </div>
+        </article>
       </div>
     </div>
-    {% endif %}
-
-    <input type="hidden" name="ronda" value="{{ronda.ronda}}"/>
-    {% if permite_modificar %}
-    <button type="submit" class="btn btn-primary">Guardar cambios</button>
-    {% endif %}
+  </section>
+  {% endif %}
+  <input type="hidden" name="ronda" value="{{ronda.ronda}}"/>
+  {% if permite_modificar %}
+  <button type="submit" class="btn-fwc">Guardar cambios</button>
+  {% endif %}
 </form>
-

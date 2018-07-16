@@ -34,42 +34,29 @@
             </tr>
         </tbody>
     </table>
-    <!--
-    <div class="row">
-        <div class="col-sm-1 text-primary  font-weight-bold" id="dias_restantes">-</div>
-        <div class="col-sm-1 text-primary  font-weight-bold" id="horas_restantes">-</div>
-        <div class="col-sm-1 text-primary  font-weight-bold" id="minutos_restantes">-</div>
-        <div class="col-sm-1 text-primary  font-weight-bold" id="segundos_restantes">-</div>
-    </div>
-    <div class="row">
-        <div class="col-sm-1">DÍAS</div>
-        <div class="col-sm-1">HS</div>
-        <div class="col-sm-1">MIN</div>
-        <div class="col-sm-1">SEG</div>
-    </div>
-    -->
 </div>
 
-<!--
-{% if score %}
-<div class="score">
-    Puntos: {{score.scoreTotal}} <br/>
-</div>
-{% endif %}
+<p class="bajada">
+    Completá el marcador de cada partido. El resultado (ganador, perdedor o empate) se infiere del marcador. Seleccioná también quien mete el primer gol en cada partido. 
+Por último, no te olvides de cargar los extras.
+</p>
 
 <div class="selector-rondas">
-    <ul class="menu-rondas">
+    <ul class="nav nav-tabs">
         {% for r in rondas %}
         <li
+        class="nav-item"
+        ><a
         {% if ronda.ronda == r.ronda %}
-        class="seleccionada"
+            class="nav-link active"
+        {% else %}
+            class="nav-link"
         {% endif %}
-        ><a href="/?ronda={{r.ronda}}">{{r.ronda}}</a> </li>
+            href="/?ronda={{r.ronda}}">{{r.ronda}}</a> </li>
         {% endfor %}
     </ul>
 </div>
 
--->
 {% include "rondas2.html" %}
 
 {% endblock %}

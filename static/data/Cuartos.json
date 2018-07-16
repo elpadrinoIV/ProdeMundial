@@ -2,39 +2,47 @@
     "Cuartos de final": {
         "partidos": [
             {
-                "equipo1": "",
-                "equipo2": "",
-                "fecha": "2014/07/04",
+                "codEquipo1": "ury",
+                "equipo1": "Uruguay",
+                "codEquipo2": "fra",
+                "equipo2": "Francia",
+                "fecha": "2018/07/06",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             },
             {
-                "equipo1": "",
-                "equipo2": "",
-                "fecha": "2014/07/04",
+                "codEquipo1": "bra",
+                "equipo1": "Brasil",
+                "codEquipo2": "bel",
+                "equipo2": "B\u00e9lgica",
+                "fecha": "2018/07/06",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             },
             {
-                "equipo1": "",
-                "equipo2": "",
-                "fecha": "2014/07/05",
+                "codEquipo1": "swe",
+                "equipo1": "Suecia",
+                "codEquipo2": "eng",
+                "equipo2": "Inglaterra",
+                "fecha": "2018/07/07",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             },
             {
-                "equipo1": "",
-                "equipo2": "",
-                "fecha": "2014/07/05",
+                "codEquipo1": "rus",
+                "equipo1": "Rusia",
+                "codEquipo2": "cro",
+                "equipo2": "Croacia",
+                "fecha": "2018/07/07",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": false,
+        "permite_modificar": true,
         "tipo": "non-grupo"
     }
 }

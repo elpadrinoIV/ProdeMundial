@@ -3,27 +3,68 @@
     <head>
         <title>Prode Mundial 2018</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="/stylesheets/estudioindex.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     </head>
     <body>
-
+    <div class="rowTop">
+  <button role="button" class="menuSlide toggle-sidebar"> Menu<span class="label">MENU</span> </button>
+</div>
+<aside id="sidemenu" class="sidemenu">
+  <div id="contentAside">
+    <div class="topBack"><span class="btnBack"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</span></div>
+    <ul class="cd-accordion-menu animated menuMain">
+      {% if user %}
+      <li class="has-children"> <a>Instancias</a>
+        <input type="checkbox" name ="Instancias" id="Instancias">
+        <label></label>
+        <ul>
+          <li><a class="dropdown-item" href="/?ronda=Primera">Primera</a></li>
+          <li><a class="dropdown-item" href="/?ronda=Octavos">Octavos</a></li>
+          <li><a class="dropdown-item" href="/?ronda=Cuartos">Cuartos</a></li>
+          <li><a class="dropdown-item" href="/?ronda=Semifinal">Semifinal</a></li>
+          <li><a class="dropdown-item" href="/?ronda=TercerPuesto">Tercer puesto</a></li>
+          <li><a class="dropdown-item" href="/?ronda=Final">Final</a></li>
+        </ul>
+      </li>
+      <li> <a href="/posiciones">Posiciones</a> </li>
+      <li> <a href="/resultados_por_usuario">Resultados por participante</a> </li>
+      <li class="has-children"> <a>Resultados reales</a>
+        <input type="checkbox" name ="Resultados" id="Resultados">
+        <label></label>
+        <ul>
+          <li><a class="dropdown-item" href="/resultados?ronda=Primera">Primera</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=Octavos">Octavos</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=Cuartos">Cuartos</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=Semifinal">Semifinal</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=TercerPuesto">Tercer puesto</a></li>
+          <li><a class="dropdown-item" href="/resultados?ronda=Final">Final</a></li>
+        </ul>
+      </li>
+      <li> <a href="/reglas">Reglas</a> </li>
+      <li> <a href="/logout"><i class="fas fa-user"></i>{{user.name}} (Logout)</a> </li>
+      {% else %}
+      <li> <a href="/reglas">Reglas</a> </li>
+      <li> <a href="/login">Login</a> </li>
+      <!--
+      <li> <a href="/signup">Registrarse</a> </li>
+      -->
+      {% endif %}
+    </ul>
+  </div>
+</aside>
+<div class="overlay"></div>
         <div class="container text-center">
             <ul class="nav nav-tabs">
                 {% if user %}
-                <li class="nav-item-dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Instancias</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/">Primera</a>
-                        <a class="dropdown-item disabled" href="/?ronda=Octavos">Octavos</a>
-                        <a class="dropdown-item disabled" href="/?ronda=Cuartos">Cuartos</a>
-                        <a class="dropdown-item disabled" href="/?ronda=Semifinal">Semifinal</a>
-                        <a class="dropdown-item disabled" href="/?ronda=TercerPuesto">Tercer puesto</a>
-                        <a class="dropdown-item disabled" href="/?ronda=Final">Final</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/posiciones">Posiciones</a>
@@ -37,8 +78,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/reglas">Reglas</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout">{{user.name}} (Logout)</a>
+                <li class="nav-item user">
+                    <a class="nav-link" href="/logout"><i class="fas fa-user"></i>{{user.name}} (Logout)</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
@@ -47,11 +88,30 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Login</a>
                 </li>
+                <!--
                 <li class="nav-item">
                     <a class="nav-link" href="/signup">Registrarse</a>
                 </li>
+                -->
                 {% endif %}
             </ul>
+
+            <div class="title">
+                <div class="logo">
+                    <img src="/images/254645_w.png" width="150" height="150" alt=""/>
+                </div>
+                <div class="texto">
+                    <h1>PRODE</h1>
+                    <h3>COPA MUNDIAL DE LA FIFA RUSIA 2018™</h3>
+                    <h4>14 JUNIO - 15 JULIO</h4>
+                    <ul class="redes">
+                        <li><a href="https://www.facebook.com/fifaworldcup" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/FifaWorldCup_es" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/fifaworldcup/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/FIFATV" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
 
             {% block body_content %}
             {% endblock %}
@@ -59,3 +119,53 @@
 
     </body>
 </html>
+<script>
+$('.toggle-sidebar').click(function(event) {
+		event.preventDefault();
+		var aside$ =  $('body');
+		aside$.addClass('open');
+});
+
+$('.overlay').click(function(event) {
+		event.preventDefault();
+		var aside$ =  $('body');
+		aside$.removeClass('open');
+});
+$('.menuButton').click(function(event) {
+	event.preventDefault();
+	var aside2$ =  $('#sidemenu');
+	aside2$.children().removeClass('openA2');
+	var aside1$ =  $('#contentAside');
+	aside1$.removeClass('closeA1');
+});
+$('.btnBack').click(function(event) {
+		event.preventDefault();
+		var aside$ =  $('body');
+		aside$.removeClass('open');
+});
+</script>
+<script src="/scripts/jquery.touchSwipe.min.js"></script>
+<script>
+jQuery(document).ready(function(){
+
+	$('.cd-accordion-menu li:has(ul)').addClass('has-children');
+	//$(".cd-accordion-menu li:has(ul)").append('<i class="fa fa-plus"></i>');
+
+	var accordionsMenu = $('.cd-accordion-menu');
+
+	if( accordionsMenu.length > 0 ) {
+
+		accordionsMenu.each(function(){
+			var accordion = $(this);
+			//detect change in the input[type="checkbox"] value
+
+			accordion.on('change', 'input[type="checkbox"]', function(){
+				var checkbox = $(this);
+
+				( checkbox.prop('checked') ) ? checkbox.siblings('ul').attr('style', 'display:none;').slideDown(300) : checkbox.siblings('ul').attr('style', 'display:block;').slideUp(300);
+
+			  	});
+		});
+	}
+});
+</script>

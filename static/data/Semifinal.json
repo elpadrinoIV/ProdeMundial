@@ -2,23 +2,27 @@
     "Semifinal": {
         "partidos": [
             {
-                "equipo1": "",
-                "equipo2": "",
-                "fecha": "2014/07/08",
+                "codEquipo1": "fra",
+                "equipo1": "Francia",
+                "codEquipo2": "bel",
+                "equipo2": "B\u00e9lgica",
+                "fecha": "2018/07/10",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             },
             {
-                "equipo1": "",
-                "equipo2": "",
-                "fecha": "2014/07/09",
+                "codEquipo1": "cro",
+                "equipo1": "Croacia",
+                "codEquipo2": "eng",
+                "equipo2": "Inglaterra",
+                "fecha": "2018/07/10",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             }
         ],
-        "permite-modificar": false,
+        "permite_modificar": true,
         "tipo": "non-grupo"
     }
 }

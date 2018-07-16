@@ -25,9 +25,32 @@
 
 {% if score %}
 <div class="score row">
-    <div class="col-sm">Puntos: {{score.scoreTotal}} </div>
+  <div class="col-sm">Puntos: <span>{{score.scoreTotal}}</span></div>
 </div>
 {% endif %}
+
+<div class="selector-rondas rondasUsers">
+    <ul class="nav nav-tabs">
+        {% for r in rondas %}
+        <li
+        class="nav-item"
+        ><a
+        {% if ronda.ronda == r.ronda %}
+            class="nav-link active"
+        {% else %}
+            class="nav-link"
+        {% endif %}
+        {% if current_user and current_user != 'ninguno' %}
+            href="/resultados_por_usuario?usuario={{current_user}}&ronda={{r.ronda}}">{{r.ronda}}
+        {% else %}
+            href="/resultados_por_usuario?ronda={{r.ronda}}">{{r.ronda}}
+        {% endif %}
+        </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
 
 
 {% include "rondas2.html" %}
