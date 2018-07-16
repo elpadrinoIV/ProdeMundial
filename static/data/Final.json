@@ -2,17 +2,17 @@
     "Final": {
         "partidos": [
             {
-                "codEquipo1": "",
-                "equipo1": "",
-                "codEquipo2": "",
-                "equipo2": "",
+                "codEquipo1": "fra",
+                "equipo1": "Francia",
+                "codEquipo2": "cro",
+                "equipo2": "Croacia",
                 "fecha": "2018/07/15",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             }
         ],
-        "permite_modificar": false,
+        "permite_modificar": true,
         "tipo": "non-grupo"
     }
 }

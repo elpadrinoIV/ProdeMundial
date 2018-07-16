@@ -706,3 +706,36 @@ class ResultadosPorUsuarioHandler(BaseHandler):
         logging.info("POST_REQUEST RESULTADOSPORUSUARIOHANDLER")
         usuario = self.request.get('usuario_seleccionado')
         self.redirect("/resultados_por_usuario?usuario=%s" % usuario)
+
+
+
+
+########## SCORES POR USUARIO HANDLER ##########
+class ScoresHandler(BaseHandler):
+    def get(self):
+        if not self.user:
+            self.redirect('/')
+            return
+            
+        if self.user.name != 'NicoDascanio' and self.user.name != 'MarianoDascanio':
+            self.redirect('/')
+            return
+
+        usuarios = dbmodels.User.all()
+        usuarios.order("name")
+        usuarios = list(usuarios)
+
+        scores = {}
+        usuario = self.request.get('usuario')
+        if usuario is not None and usuario != "":
+            scores = getScore(usuario)
+
+        self.render('scores2.html', scores = scores, usuarios = usuarios)
+
+
+
+
+    def postLoggeado(self):
+        logging.info("POST_REQUEST SCORESHANDLER")
+        usuario = self.request.get('usuario_seleccionado')
+        self.redirect("/scores?usuario=%s" % usuario)

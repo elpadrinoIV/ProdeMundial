@@ -2,17 +2,17 @@
     "Tercer Puesto": {
         "partidos": [
             {
-                "codEquipo1": "",
-                "equipo1": "",
-                "codEquipo2": "",
-                "equipo2": "",
+                "codEquipo1": "bel",
+                "equipo1": "B\u00e9lgica",
+                "codEquipo2": "eng",
+                "equipo2": "Inglaterra",
                 "fecha": "2018/07/14",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             }
         ],
-        "permite_modificar": false,
+        "permite_modificar": true,
         "tipo": "non-grupo"
     }
 }

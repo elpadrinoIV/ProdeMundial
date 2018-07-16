@@ -7,6 +7,7 @@ application = webapp2.WSGIApplication([
     #('/signup', handlers.SignUpHandler),
     ('/reglas', handlers.ReglasHandler),
     ('/posiciones', handlers.PosicionesHandler),
+    ('/scores', handlers.ScoresHandler),
     ('/resultados', handlers.ResultadosHandler),
     ('/usuarios', handlers.UsuariosHandler),
     ('/resultados_por_usuario', handlers.ResultadosPorUsuarioHandler),
