@@ -2,11 +2,11 @@
     "Final": {
         "partidos": [
             {
-                "codEquipo1": "fra",
-                "equipo1": "Francia",
-                "codEquipo2": "cro",
-                "equipo2": "Croacia",
-                "fecha": "2018/07/15",
+                "codEquipo1": "",
+                "equipo1": "",
+                "codEquipo2": "",
+                "equipo2": "",
+                "fecha": "2026/07/19",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
