@@ -1,34 +1,194 @@
 {
-    "deu": {"code": "DEU",  "title": "Alemania"},
-    "sau": {"code": "SAU",  "title": "Arabia Saudita"},
-    "arg": {"code": "ARG",  "title": "ARGENTINA"},
-    "aus": {"code": "AUS",  "title": "Australia"},
-    "bra": {"code": "BRA",  "title": "Brasil"},
-    "bel": {"code": "BEL",  "title": "B\u00e9lgica"},
-    "col": {"code": "COL",  "title": "Colombia"},
-    "kor": {"code": "KOR",  "title": "Corea"},
-    "cri": {"code": "CRI",  "title": "Costa Rica"},
-    "cro": {"code": "CRO",  "title": "Croacia"},
-    "dnk": {"code": "DNK",  "title": "Dinamarca"},
-    "egy": {"code": "EGY",  "title": "Egipto"},
-    "esp": {"code": "ESP",  "title": "Espa\u00f1a"},
-    "fra": {"code": "FRA",  "title": "Francia"},
-    "eng": {"code": "ENG",  "title": "Inglaterra"},
-    "irn": {"code": "IRN",  "title": "Ir\u00e1n"},
-    "isl": {"code": "ISL",  "title": "Islandia"},
-    "jpn": {"code": "JPN",  "title": "Jap\u00f3n"},
-    "mar": {"code": "MAR",  "title": "Marruecos"},
-    "mex": {"code": "MEX",  "title": "M\u00e9xico"},
-    "nga": {"code": "NGA",  "title": "Nigeria"},
-    "pan": {"code": "PAN",  "title": "Panam\u00e1"},
-    "per": {"code": "PER",  "title": "Per\u00fa"},
-    "pol": {"code": "POL",  "title": "Polonia"},
-    "por": {"code": "POR",  "title": "Portugal"},
-    "rus": {"code": "RUS",  "title": "Rusia"},
-    "sen": {"code": "SEN",  "title": "Senegal"},
-    "srb": {"code": "SRB",  "title": "Serbia"},
-    "swe": {"code": "SWE",  "title": "Suecia"},
-    "sui": {"code": "SUI",  "title": "Suiza"},
-    "tun": {"code": "TUN",  "title": "T\u00fanez"},
-    "ury": {"code": "URY",  "title": "Uruguay"}
+    "arg": {
+        "code": "ARG",
+        "title": "ARGENTINA"
+    },
+    "aus": {
+        "code": "AUS",
+        "title": "Australia"
+    },
+    "aut": {
+        "code": "AUT",
+        "title": "Austria"
+    },
+    "bel": {
+        "code": "BEL",
+        "title": "B\u00e9lgica"
+    },
+    "bih": {
+        "code": "BIH",
+        "title": "Bosnia y Herzegovina"
+    },
+    "bra": {
+        "code": "BRA",
+        "title": "Brasil"
+    },
+    "can": {
+        "code": "CAN",
+        "title": "Canada"
+    },
+    "civ": {
+        "code": "CIV",
+        "title": "Costa de Marfil"
+    },
+    "cod": {
+        "code": "COD",
+        "title": "Congo RD"
+    },
+    "col": {
+        "code": "COL",
+        "title": "Colombia"
+    },
+    "cpv": {
+        "code": "CPV",
+        "title": "Cabo Verde"
+    },
+    "cro": {
+        "code": "CRO",
+        "title": "Croacia"
+    },
+    "cur": {
+        "code": "CUR",
+        "title": "Curazao"
+    },
+    "cze": {
+        "code": "CZE",
+        "title": "Rep\u00fablica Checa"
+    },
+    "deu": {
+        "code": "DEU",
+        "title": "Alemania"
+    },
+    "dza": {
+        "code": "DZA",
+        "title": "Argelia"
+    },
+    "ecu": {
+        "code": "ECU",
+        "title": "Ecuador"
+    },
+    "egy": {
+        "code": "EGY",
+        "title": "Egipto"
+    },
+    "eng": {
+        "code": "ENG",
+        "title": "Inglaterra"
+    },
+    "esp": {
+        "code": "ESP",
+        "title": "Espa\u00f1a"
+    },
+    "fra": {
+        "code": "FRA",
+        "title": "Francia"
+    },
+    "gha": {
+        "code": "GHA",
+        "title": "Ghana"
+    },
+    "hai": {
+        "code": "HAI",
+        "title": "Hait\u00ed"
+    },
+    "irn": {
+        "code": "IRN",
+        "title": "Ir\u00e1n"
+    },
+    "irq": {
+        "code": "IRQ",
+        "title": "Irak"
+    },
+    "jor": {
+        "code": "JOR",
+        "title": "Jordania"
+    },
+    "jpn": {
+        "code": "JPN",
+        "title": "Jap\u00f3n"
+    },
+    "kor": {
+        "code": "KOR",
+        "title": "Corea del Sur"
+    },
+    "mar": {
+        "code": "MAR",
+        "title": "Marruecos"
+    },
+    "mex": {
+        "code": "MEX",
+        "title": "M\u00e9xico"
+    },
+    "nld": {
+        "code": "NLD",
+        "title": "Holanda"
+    },
+    "nor": {
+        "code": "NOR",
+        "title": "Noruega"
+    },
+    "nzl": {
+        "code": "NZL",
+        "title": "Nueva Zelanda"
+    },
+    "pan": {
+        "code": "PAN",
+        "title": "Panam\u00e1"
+    },
+    "par": {
+        "code": "PAR",
+        "title": "Paraguay"
+    },
+    "por": {
+        "code": "POR",
+        "title": "Portugal"
+    },
+    "qat": {
+        "code": "QAT",
+        "title": "Qatar"
+    },
+    "rsa": {
+        "code": "RSA",
+        "title": "Sud\u00e1frica"
+    },
+    "sau": {
+        "code": "SAU",
+        "title": "Arabia Saudita"
+    },
+    "sco": {
+        "code": "SCO",
+        "title": "Escocia"
+    },
+    "sen": {
+        "code": "SEN",
+        "title": "Senegal"
+    },
+    "sui": {
+        "code": "SUI",
+        "title": "Suiza"
+    },
+    "swe": {
+        "code": "SWE",
+        "title": "Suecia"
+    },
+    "tun": {
+        "code": "TUN",
+        "title": "T\u00fanez"
+    },
+    "tur": {
+        "code": "TUR",
+        "title": "Turqu\u00eda"
+    },
+    "ury": {
+        "code": "URY",
+        "title": "Uruguay"
+    },
+    "usa": {
+        "code": "USA",
+        "title": "EEUU"
+    },
+    "uzb": {
+        "code": "UZB",
+        "title": "Uzbekist\u00e1n"
+    }
 }
