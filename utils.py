@@ -26,10 +26,10 @@ SECRET_VALUE = "vpqas11.q+akskdl239abcna199fnq6a8w3fjs"
 ########## VARIOS HASHING ##########
 
 def make_salt():
-    return ''.join(random.choice(string.letters) for x in xrange(10))
+    return ''.join(random.choice(string.ascii_letters) for x in range(10))
 
 def hash_string(s):
-    return hmac.new(SECRET_VALUE, s, hashlib.sha256).hexdigest()
+    return hmac.new(SECRET_VALUE.encode(), s.encode(), hashlib.sha256).hexdigest()
 
 def make_secure_value(s):
     return "%s|%s" %(s, hash_string(s))
@@ -44,7 +44,7 @@ def make_password_hash(name, pw, salt = None):
     if salt is None:
         salt = make_salt()
 
-    hash_value = hashlib.sha256(name + pw + salt).hexdigest()
+    hash_value = hashlib.sha256((name + pw + salt).encode()).hexdigest()
     return "%s,%s" %(hash_value, salt)
 
 def valid_password(name, pw, h):

@@ -1,5 +1,5 @@
 {
-    "Treintaidosavos de final": {
+    "16avos": {
         "partidos": [
             {
                 "codEquipo1": "",
@@ -162,7 +162,7 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite_modificar": true,
+        "permite_modificar": false,
         "tipo": "non-grupo"
     }
 }

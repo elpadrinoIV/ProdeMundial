@@ -42,7 +42,7 @@
                 "scoreEquipo2": ""
             }
         ],
-        "permite_modificar": true,
+        "permite_modificar": false,
         "tipo": "non-grupo"
     }
 }

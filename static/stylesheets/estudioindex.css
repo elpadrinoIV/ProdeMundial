@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'dusha_plusregular';
-    src: url('/fonts/dusha-regular.woff');
+    font-family: 'qatar2022';
+    src: url('/fonts/Qatar2022-Heavy.woff2');
     font-weight: normal;
     font-style: normal;
 
@@ -15,7 +15,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	background-image: url(/images/fwc_darkbluebg.png);
 	background-repeat:repeat;
-	font-size: 62.5%
+	font-size: 75%
 }
 .wrapper{
     width: 95%;
@@ -46,19 +46,19 @@ body{
 	background-color:#bcb187;
 }
 .nav-tabs .nav-item.registro .nav-link{
-	color:#0f4583;
+	color:#7e2239;
 }
 .nav-tabs .nav-item:hover{
 	background-color:#FFF;
 }
 .nav-tabs .nav-item:hover .nav-link{
-	color:#0f4583;
+	color:#7e2239;
 }
 .nav-tabs .nav-item.registro:hover{
 	background-color:#FFF;
 }
 .nav-tabs .nav-item.registro:hover .nav-link{
-	color:#0f4583;
+	color:#7e2239;
 }
 .nav-tabs .nav-item {
     margin-bottom: 0;
@@ -67,7 +67,7 @@ body{
 
 
 h2{
-	font-family: 'dusha_plusregular', sans-serif !important;
+	font-family: 'qatar2022', sans-serif !important;
 	color:#FFF;
 	text-transform:uppercase;
 }
@@ -82,7 +82,7 @@ h2{
 	margin-right:20px;
 }
 .title h1{
-	font-family: 'dusha_plusregular', sans-serif !important;
+	font-family: 'qatar2022', sans-serif !important;
 	color:#FFF;
 	text-transform:uppercase;
 	font-size:6em;
@@ -92,7 +92,7 @@ h2{
 	margin:0;
 }
 .title h3{
-	font-family: 'dusha_plusregular', sans-serif !important;
+	font-family: 'qatar2022', sans-serif !important;
 	color:#FFF;
 	text-transform:uppercase;
 	font-size:2.5em;
@@ -103,7 +103,7 @@ h2{
 	padding-bottom:3px;
 }
 .title h4{
-	font-family: 'dusha_plusregular', sans-serif !important;
+	font-family: 'qatar2022', sans-serif !important;
 	color:#FFF;
 	text-transform:uppercase;
 	font-size:2em;
@@ -179,7 +179,7 @@ form.text-left h2{
 }
 .btn-fwc:hover{
 
-	background-color: #bcb187;
+	background-color: #ffffff;
 }
 .btn-fwc:hover:before{
 	background-position:0 -42px;
@@ -218,7 +218,7 @@ ul.redes li a:hover {
 	background-color:#FFF;
 }
 ul.redes li a:hover i{
-	color:#0f4583;
+	color:#7e2239;
 }
 /*------INDEX*/
 
@@ -310,16 +310,16 @@ ul.redes li a:hover i{
     font-size: 1.5em;
 }
 .text-left a {
-    color: #bcb187;
+    color: #ffffff;
 }
 table.table a {
     font-size: 13px;
-    color: #bcb187;
+    color: #ffffff;
     font-weight: 700;
 }
 table.table td {
     font-size: 13px;
-    color: #bcb187;
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -376,7 +376,7 @@ border:0 !important;
 	display:inline-block;
 }
 .grupo h3{
-	font-family: 'dusha_plusregular', sans-serif !important;
+	font-family: 'qatar2022', sans-serif !important;
 	color:#FFF;
 	text-transform:uppercase;
 	font-size:2.8em;
@@ -550,10 +550,10 @@ section#extras article .content span{
 }
 /*----------------*/
 .nav-tabs .nav-item.user{
-	background-color:#bcb187;
+	background-color:#ffffff;
 }
 .nav-tabs .nav-item.user .nav-link{
-	color:#0f4583;
+	color:#7e2239;
 }
 .text-primary {
     color: #FFF !important;
@@ -578,11 +578,11 @@ section#extras article .content span{
     font-size: 30px !important;
 }
 .score.row .col-sm {
-    font-size: 12px;
+    font-size: 14px;
     color: #FFF;
 }
 .score.row .col-sm span {
-    color: #bcb187;
+    color: #ffffff;
     font-size: 50px;
     display: block;
     line-height: 100%;
@@ -591,14 +591,14 @@ section#extras article .content span{
     padding: 20px;
 }
 .mensajes {
-    color: #bcb187;
+    color: #ffffff;
     font-size: 20px;
     display: block;
     line-height: 100%;
 }
 .bajada {
-    font-size: 14px;
-    color: #bcb187;
+    font-size: 18px;
+    color: #ffffff;
     padding: 10px 30px;
     box-sizing: border-box;
 }
@@ -880,7 +880,7 @@ body.open #sidemenu .footerS {
 	padding-left:15px;
 }
 #sidemenu li ul a{
-	font-size:12px;
+	font-size:14px;
 	color:#FFF;
 }
 .menuSlide {
@@ -1048,7 +1048,7 @@ ul.nav.nav-tabs {
     margin-top: 0px;
 }
 #sidemenu ul li:last-child a{
-color:#bcb187;
+color:#ffffff;
 }
 #sidemenu ul li li:last-child a{
 color:#FFF;
@@ -1076,4 +1076,72 @@ form .col-form-label {
     justify-content: center;
 }
 
+}
+
+
+form.text-left .col-form-label {
+	color: #FFF;
+	font-size: 1.2em;
+	text-align: right;
+}
+form.text-left .col-sm-7 {
+	-ms-flex: 0 0 40.333333%;
+	flex: 0 0 40.333333%;
+	max-width: 40.333333%;
+}
+form.text-left {
+	padding: 0 0 80px 0;
+}
+form.text-left .btn-fwc:hover{
+	color: #FFF;
+	background-color: #7e2239;
+}
+form.text-left .btn-primary{
+	background-color: #7e2239;
+	border-color: #7e2239;
+}
+form.text-left .btn-primary:hover {
+	background-color: #611b2d;
+	border-color: #611b2d;
+}
+
+@media screen and (max-width: 800px){
+	.title {
+		background: #8A1538;
+		background-color: #8A1538;
+	}
+
+	.title h1 {
+		display: inline-block;
+		font-size: 1em;
+	}
+
+	form.text-left .col-form-label {
+		color: #FFF !important;
+		font-size: 1.2em;
+		text-align: center;
+	}
+	form.text-left .col-sm-7 {
+		-ms-flex: auto;
+		flex: auto;
+		max-width: unset;
+	}
+	form.text-left {
+		padding: 40px 0 80px 0;
+	}
+	.menuSlide {
+		background-color: #4f1524;
+	}
+	#sidemenu{
+		background-color:rgba(79,21,36,.9)
+	}
+	#sidemenu ul {
+		list-style: none;
+	}
+}
+
+.btn-fwc {
+	color: #000;
+	-moz-appearance: none;
+	appearance: none;
 }
