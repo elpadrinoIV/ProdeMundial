@@ -1,4 +1,7 @@
 <form method="post" class="partidos">
+    {% if permite_modificar %}
+        <button type="submit" class="btn-fwc">Guardar cambios</button>
+    {% endif %} 
   <section id="resultados">
     <div class="wrapper">
       <div class="displayFlex"> {% for grupo,datos_grupo in fixture|dictsort %}

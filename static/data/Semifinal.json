@@ -2,27 +2,27 @@
     "Semifinal": {
         "partidos": [
             {
-                "codEquipo1": "",
-                "equipo1": "",
-                "codEquipo2": "",
-                "equipo2": "",
+                "codEquipo1": "fra",
+                "equipo1": "Francia",
+                "codEquipo2": "esp",
+                "equipo2": "España",
                 "fecha": "2026/07/14",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             },
             {
-                "codEquipo1": "",
-                "equipo1": "",
-                "codEquipo2": "",
-                "equipo2": "",
+                "codEquipo1": "eng",
+                "equipo1": "Inglaterra",
+                "codEquipo2": "arg",
+                "equipo2": "ARGENTINA",
                 "fecha": "2026/07/15",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             }
         ],
-        "permite_modificar": false,
+        "permite_modificar": true,
         "tipo": "non-grupo"
     }
 }

@@ -1,0 +1,96 @@
+{
+    "A": {
+        "partidos": [
+{"codEquipo1": "ecu", "equipo1": "Ecuador", "codEquipo2": "sen", "equipo2": "Senegal", "fecha": "2022/11/29","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "nld", "equipo1": "Holanda", "codEquipo2": "ecu", "equipo2": "Ecuador", "fecha": "2022/11/25","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "nld", "equipo1": "Holanda", "codEquipo2": "qat", "equipo2": "Qatar", "fecha": "2022/11/29","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "qat", "equipo1": "Qatar", "codEquipo2": "ecu", "equipo2": "Ecuador", "fecha": "2022/11/21","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "qat", "equipo1": "Qatar", "codEquipo2": "sen", "equipo2": "Senegal", "fecha": "2022/11/25","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "sen", "equipo1": "Senegal", "codEquipo2": "nld", "equipo2": "Holanda", "fecha": "2022/11/21","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""}
+        ],
+        "permite_modificar": true,
+        "tipo": "grupo"
+    },
+    "B": {
+        "partidos": [
+{"codEquipo1": "eng", "equipo1": "Inglaterra", "codEquipo2": "irn", "equipo2": "Ir\u00e1n", "fecha": "2022/11/21","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "eng", "equipo1": "Inglaterra", "codEquipo2": "usa", "equipo2": "EEUU", "fecha": "2022/11/25","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "irn", "equipo1": "Ir\u00e1n", "codEquipo2": "usa", "equipo2": "EEUU", "fecha": "2022/11/29","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "usa", "equipo1": "EEUU", "codEquipo2": "wal", "equipo2": "Gales", "fecha": "2022/11/21","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "wal", "equipo1": "Gales", "codEquipo2": "eng", "equipo2": "Inglaterra", "fecha": "2022/11/29","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "wal", "equipo1": "Gales", "codEquipo2": "irn", "equipo2": "Ir\u00e1n", "fecha": "2022/11/25","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""}
+        ],
+        "permite_modificar": true,
+        "tipo": "grupo"
+    },
+    "C": {
+        "partidos": [
+{"codEquipo1": "arg", "equipo1": "ARGENTINA", "codEquipo2": "mex", "equipo2": "M\u00e9xico", "fecha": "2022/11/26","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "arg", "equipo1": "ARGENTINA", "codEquipo2": "sau", "equipo2": "Arabia Saudita", "fecha": "2022/11/22","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "mex", "equipo1": "M\u00e9xico", "codEquipo2": "pol", "equipo2": "Polonia", "fecha": "2022/11/22","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "pol", "equipo1": "Polonia", "codEquipo2": "arg", "equipo2": "ARGENTINA", "fecha": "2022/11/30","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "pol", "equipo1": "Polonia", "codEquipo2": "sau", "equipo2": "Arabia Saudita", "fecha": "2022/11/26","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "sau", "equipo1": "Arabia Saudita", "codEquipo2": "mex", "equipo2": "M\u00e9xico", "fecha": "2022/11/30","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""}
+        ],
+        "permite_modificar": true,
+        "tipo": "grupo"
+    },
+    "D": {
+        "partidos": [
+{"codEquipo1": "dnk", "equipo1": "Dinamarca", "codEquipo2": "tun", "equipo2": "T\u00fanez", "fecha": "2022/11/22","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "fra", "equipo1": "Francia", "codEquipo2": "aus", "equipo2": "Australia", "fecha": "2022/11/22","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "fra", "equipo1": "Francia", "codEquipo2": "dnk", "equipo2": "Dinamarca", "fecha": "2022/11/26","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "tun", "equipo1": "T\u00fanez", "codEquipo2": "aus", "equipo2": "Australia", "fecha": "2022/11/26","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""}
+        ],
+        "permite_modificar": true,
+        "tipo": "grupo"
+    },
+    "E": {
+        "partidos": [
+{"codEquipo1": "cri", "equipo1": "Costa Rica", "codEquipo2": "deu", "equipo2": "Alemania", "fecha": "2022/11/30","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "deu", "equipo1": "Alemania", "codEquipo2": "jpn", "equipo2": "Jap\u00f3n", "fecha": "2022/11/23","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "esp", "equipo1": "Espa\u00f1a", "codEquipo2": "cri", "equipo2": "Costa Rica", "fecha": "2022/11/23","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "esp", "equipo1": "Espa\u00f1a", "codEquipo2": "deu", "equipo2": "Alemania", "fecha": "2022/11/27","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "jpn", "equipo1": "Jap\u00f3n", "codEquipo2": "cri", "equipo2": "Costa Rica", "fecha": "2022/11/27","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "jpn", "equipo1": "Jap\u00f3n", "codEquipo2": "esp", "equipo2": "Espa\u00f1a", "fecha": "2022/11/30","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""}
+        ],
+        "permite_modificar": true,
+        "tipo": "grupo"
+    },
+    "F": {
+        "partidos": [
+{"codEquipo1": "bel", "equipo1": "B\u00e9lgica", "codEquipo2": "can", "equipo2": "Canada", "fecha": "2022/11/23","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "bel", "equipo1": "B\u00e9lgica", "codEquipo2": "mar", "equipo2": "Marruecos", "fecha": "2022/11/27","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "can", "equipo1": "Canada", "codEquipo2": "mar", "equipo2": "Marruecos", "fecha": "2022/12/01","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "cro", "equipo1": "Croacia", "codEquipo2": "bel", "equipo2": "B\u00e9lgica", "fecha": "2022/12/01","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "cro", "equipo1": "Croacia", "codEquipo2": "can", "equipo2": "Canada", "fecha": "2022/11/27","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "mar", "equipo1": "Marruecos", "codEquipo2": "cro", "equipo2": "Croacia", "fecha": "2022/11/23","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""}
+        ],
+        "permite_modificar": true,
+        "tipo": "grupo"
+    },
+    "G": {
+        "partidos": [
+{"codEquipo1": "bra", "equipo1": "Brasil", "codEquipo2": "srb", "equipo2": "Serbia", "fecha": "2022/11/24","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "bra", "equipo1": "Brasil", "codEquipo2": "sui", "equipo2": "Suiza", "fecha": "2022/11/28","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "cmr", "equipo1": "Camer\u00fan", "codEquipo2": "bra", "equipo2": "Brasil", "fecha": "2022/12/02","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "cmr", "equipo1": "Camer\u00fan", "codEquipo2": "srb", "equipo2": "Serbia", "fecha": "2022/11/28","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "srb", "equipo1": "Serbia", "codEquipo2": "sui", "equipo2": "Suiza", "fecha": "2022/12/02","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "sui", "equipo1": "Suiza", "codEquipo2": "cmr", "equipo2": "Camer\u00fan", "fecha": "2022/11/24","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""}
+        ],
+        "permite_modificar": true,
+        "tipo": "grupo"
+    },
+    "H": {
+        "partidos": [
+{"codEquipo1": "gha", "equipo1": "Ghana", "codEquipo2": "ury", "equipo2": "Uruguay", "fecha": "2022/12/02","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "kor", "equipo1": "Corea", "codEquipo2": "gha", "equipo2": "Ghana", "fecha": "2022/11/28","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "kor", "equipo1": "Corea", "codEquipo2": "por", "equipo2": "Portugal", "fecha": "2022/12/02","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "por", "equipo1": "Portugal", "codEquipo2": "gha", "equipo2": "Ghana", "fecha": "2022/11/24","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "por", "equipo1": "Portugal", "codEquipo2": "ury", "equipo2": "Uruguay", "fecha": "2022/11/28","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""},
+{"codEquipo1": "ury", "equipo1": "Uruguay", "codEquipo2": "kor", "equipo2": "Corea", "fecha": "2022/11/24","primerGol": "", "scoreEquipo1": "", "scoreEquipo2": ""}
+        ],
+        "permite_modificar": true,
+        "tipo": "grupo"
+    }
+}

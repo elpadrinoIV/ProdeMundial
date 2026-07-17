@@ -1,3 +1,6 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+
 from handlers import app
 from google.appengine.api import wrap_wsgi_app
 

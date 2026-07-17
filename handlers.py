@@ -5,7 +5,19 @@ import json
 from datetime import datetime
 
 from flask import Flask, request, redirect, render_template, make_response, g
-from google.appengine.api import memcache
+if os.environ.get('GAE_ENV') == 'standard':
+    from google.appengine.api import memcache
+else:
+    class _Cache:
+        def __init__(self):
+            self._store = {}
+        def get(self, key):
+            return self._store.get(key)
+        def set(self, key, value, time=0):
+            self._store[key] = value
+        def delete(self, key):
+            self._store.pop(key, None)
+    memcache = _Cache()
 
 import dbmodels
 import utils
@@ -14,13 +26,13 @@ app = Flask(__name__, static_url_path='', static_folder='static')
 
 USUARIO_ESPECIAL_RESULTADOS = "resultados_de_los_partidos"
 
-RONDAS = [{'ronda': "Primera", 'limite': 'Thu June 11 19:55:00 2026 GMT-0000'},
-          {'ronda': "16avos", 'limite': 'Sun June 28 19:55:00 2026 GMT-0000'},
-          {'ronda': "Octavos", 'limite': 'Sat July 04 17:55:00 2026 GMT-0000'},
-          {'ronda': "Cuartos", 'limite': 'Thu July 09 20:55:00 2026 GMT-0000'},
-          {'ronda': "Semifinal", 'limite': 'Tue July 14 19:55:00 2026 GMT-0000'},
-          {'ronda': "TercerPuesto", 'limite': 'Sat July 18 21:55:00 2026 GMT-0000'},
-          {'ronda': "Final", 'limite': 'Sun July 19 19:55:00 2026 GMT-0000'}]
+RONDAS = [{'ronda': "Primera", 'limite': 'Thu June 11 18:55:00 2026 GMT-0000'},
+          {'ronda': "16avos", 'limite': 'Sun June 28 19:00:00 2026 GMT-0000'},
+          {'ronda': "Octavos", 'limite': 'Sat July 04 17:00:00 2026 GMT-0000'},
+          {'ronda': "Cuartos", 'limite': 'Thu July 09 20:00:00 2026 GMT-0000'},
+          {'ronda': "Semifinal", 'limite': 'Tue July 14 19:00:00 2026 GMT-0000'},
+          {'ronda': "TercerPuesto", 'limite': 'Sat July 18 21:00:00 2026 GMT-0000'},
+          {'ronda': "Final", 'limite': 'Sun July 19 19:00:00 2026 GMT-0000'}]
 
 
 @app.before_request
@@ -209,8 +221,8 @@ def getScore(user):
                             scoreTotal += 15
 
                     if partidoUser['primerGol'] == partidoReal['primerGol'] and partidoReal['primerGol'] != '':
-                        scorePartido += 10
-                        scoreTotal += 10
+                        scorePartido += 5
+                        scoreTotal += 5
 
                     if partidoUser['equipo1'] == 'ARGENTINA' or partidoUser['equipo2'] == 'ARGENTINA':
                         scoreTotal += scorePartido
@@ -228,6 +240,7 @@ def updateScores():
     users = dbmodels.User.todos()
     logging.info("DB_CALL: User.todos()")
     for user in users:
+        logging.info("Updating score of  (%s)" % user.name)
         score = getScore(user.name)
         user.puntaje = score['scoreTotal']
         user.put()
@@ -238,6 +251,7 @@ def updateScores():
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
+    #return redirect('/login')
     if request.method == 'GET':
         return render('signup2.html')
 
@@ -341,7 +355,7 @@ def usuarios():
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if not g.user:
-        return redirect('/signup')
+        return redirect('/login')
 
     if request.method == 'POST':
         logging.info("POST_REQUEST / (%s)" % g.user.name)

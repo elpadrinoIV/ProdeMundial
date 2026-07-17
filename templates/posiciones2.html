@@ -12,11 +12,9 @@
         </tr>
     </thead>
     <tbody>
-        {% set pos = 0 %}
         {% for usuario in usuarios %}
-        {% set pos = pos + 1 %}
         <tr>
-            <td>{{ pos }}</td>
+            <td>{{ loop.index }}</td>
             <td><a href="/resultados_por_usuario?usuario={{usuario.name}}">{{usuario.name}}</a></td>
             <td>{{usuario.puntaje}}</td>
         </tr>

@@ -2,47 +2,47 @@
     "Cuartos de final": {
         "partidos": [
             {
-                "codEquipo1": "",
-                "equipo1": "",
-                "codEquipo2": "",
-                "equipo2": "",
+                "codEquipo1": "fra",
+                "equipo1": "Francia",
+                "codEquipo2": "mar",
+                "equipo2": "Marruecos",
                 "fecha": "2026/07/09",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             },
             {
-                "codEquipo1": "",
-                "equipo1": "",
-                "codEquipo2": "",
-                "equipo2": "",
+                "codEquipo1": "esp",
+                "equipo1": "España",
+                "codEquipo2": "bel",
+                "equipo2": "Bélgica",
                 "fecha": "2026/07/10",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             },
             {
-                "codEquipo1": "",
-                "equipo1": "",
-                "codEquipo2": "",
-                "equipo2": "",
+                "codEquipo1": "nor",
+                "equipo1": "Noruega",
+                "codEquipo2": "eng",
+                "equipo2": "Inglaterra",
                 "fecha": "2026/07/11",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             },
             {
-                "codEquipo1": "",
-                "equipo1": "",
-                "codEquipo2": "",
-                "equipo2": "",
+                "codEquipo1": "arg",
+                "equipo1": "ARGENTINA",
+                "codEquipo2": "sui",
+                "equipo2": "Suiza",
                 "fecha": "2026/07/11",
                 "primerGol": "",
                 "scoreEquipo1": "",
                 "scoreEquipo2": ""
             }
         ],
-        "permite_modificar": false,
+        "permite_modificar": true,
         "tipo": "non-grupo"
     }
 }
